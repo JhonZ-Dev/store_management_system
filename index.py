@@ -63,3 +63,11 @@ def main():
 
         choice = input("Ingrese su elección (1-4): ")
 
+        if choice == '1':
+            product_id = input("Ingrese el ID del producto: ")
+            product_name = input("Ingrese el nombre del producto: ")
+            product_price = float(input("Ingrese el precio del producto: "))
+            product_quantity = int(input("Ingrese la cantidad de unidades en el inventario: "))
+            new_product = Product(product_id, product_name, product_price, product_quantity)
+            store_manager.add_product(new_product)
+
