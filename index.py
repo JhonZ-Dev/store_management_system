@@ -48,3 +48,6 @@ class StoreManager:
                         print(f'No hay suficientes existencias de "{product.name}" para realizar la venta.')
                     return
             print(f'Producto con ID {product_id} no encontrado en el inventario.')
+    def generate_sales_report(self):
+            total_sales = sum(sale["total_price"] for sale in self.sales)
+            print(f'\n--- Informe de Ventas ---\nTotal de ventas: ${total_sales}\n')
