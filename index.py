@@ -26,3 +26,6 @@ class StoreManager:
     def save_inventory(self):
         with open(self.inventory_filename, 'wb') as file:
             pickle.dump(self.inventory, file)
+    def save_sales(self):
+            with open(self.sales_filename, 'wb') as file:
+                pickle.dump(self.sales, file)    
