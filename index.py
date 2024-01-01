@@ -60,3 +60,6 @@ def main():
         print("2. Realizar venta")
         print("3. Generar informe de ventas")
         print("4. Salir")
+
+        choice = input("Ingrese su elección (1-4): ")
+
