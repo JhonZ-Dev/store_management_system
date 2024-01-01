@@ -29,3 +29,8 @@ class StoreManager:
     def save_sales(self):
             with open(self.sales_filename, 'wb') as file:
                 pickle.dump(self.sales, file)    
+    
+    def add_product(self, product):
+        self.inventory.append(product)
+        self.save_inventory()
+        print(f'Producto "{product.name}" añadido al inventario con éxito.')
