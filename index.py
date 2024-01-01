@@ -70,4 +70,8 @@ def main():
             product_quantity = int(input("Ingrese la cantidad de unidades en el inventario: "))
             new_product = Product(product_id, product_name, product_price, product_quantity)
             store_manager.add_product(new_product)
+        elif choice == '2':
+            product_id = input("Ingrese el ID del producto a vender: ")
+            quantity = int(input("Ingrese la cantidad a vender: "))
+            store_manager.sell_product(product_id, quantity)
 
