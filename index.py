@@ -34,17 +34,17 @@ class StoreManager:
         self.inventory.append(product)
         self.save_inventory()
         print(f'Producto "{product.name}" añadido al inventario con éxito.')
-def sell_product(self, product_id, quantity):
-        for product in self.inventory:
-            if product.id == product_id:
-                if product.quantity >= quantity:
-                    product.quantity -= quantity
-                    self.save_inventory()
-                    sale = {"product_id": product.id, "quantity": quantity, "total_price": product.price * quantity}
-                    self.sales.append(sale)
-                    self.save_sales()
-                    print(f'Venta realizada: {quantity} unidades de "{product.name}" por ${product.price * quantity}.')
-                else:
-                    print(f'No hay suficientes existencias de "{product.name}" para realizar la venta.')
-                return
-        print(f'Producto con ID {product_id} no encontrado en el inventario.')
+    def sell_product(self, product_id, quantity):
+            for product in self.inventory:
+                if product.id == product_id:
+                    if product.quantity >= quantity:
+                        product.quantity -= quantity
+                        self.save_inventory()
+                        sale = {"product_id": product.id, "quantity": quantity, "total_price": product.price * quantity}
+                        self.sales.append(sale)
+                        self.save_sales()
+                        print(f'Venta realizada: {quantity} unidades de "{product.name}" por ${product.price * quantity}.')
+                    else:
+                        print(f'No hay suficientes existencias de "{product.name}" para realizar la venta.')
+                    return
+            print(f'Producto con ID {product_id} no encontrado en el inventario.')
