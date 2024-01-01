@@ -51,3 +51,12 @@ class StoreManager:
     def generate_sales_report(self):
             total_sales = sum(sale["total_price"] for sale in self.sales)
             print(f'\n--- Informe de Ventas ---\nTotal de ventas: ${total_sales}\n')
+def main():
+    store_manager = StoreManager()
+
+    while True:
+        print("\n--- Sistema de Gestión de Tienda ---")
+        print("1. Agregar producto al inventario")
+        print("2. Realizar venta")
+        print("3. Generar informe de ventas")
+        print("4. Salir")
