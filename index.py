@@ -7,3 +7,9 @@ class Product:
         self.name = name
         self.price = price
         self.quantity = quantity
+class StoreManager:
+    def __init__(self, inventory_filename="inventory.pkl", sales_filename="sales.pkl"):
+        self.inventory_filename = inventory_filename
+        self.sales_filename = sales_filename
+        self.inventory = self.load_inventory()
+        self.sales = self.load_sales()
