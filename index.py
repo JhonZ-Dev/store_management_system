@@ -61,7 +61,7 @@ def main():
         print("3. Generar informe de ventas")
         print("4. Salir")
 
-        choice = input("Ingrese su elección (1-4): ")
+        
 
         if choice == '1':
             product_id = input("Ingrese el ID del producto: ")
