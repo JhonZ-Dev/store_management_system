@@ -18,11 +18,7 @@ class StoreManager:
             with open(self.inventory_filename, 'rb') as file:
                 return pickle.load(file)
         return []
-    def load_sales(self):
-        if os.path.exists(self.sales_filename):
-            with open(self.sales_filename, 'rb') as file:
-                return pickle.load(file)
-        return []
+    
     def save_inventory(self):
         with open(self.inventory_filename, 'wb') as file:
             pickle.dump(self.inventory, file)
