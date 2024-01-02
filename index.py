@@ -76,7 +76,11 @@ def main():
             store_manager.sell_product(product_id, quantity)
         elif choice == '3':
             store_manager.generate_sales_report()
-        
+        elif choice == '4':
+            store_manager.save_inventory()
+            store_manager.save_sales()
+            print("Saliendo del programa. ¡Hasta luego!")
+            break
         else:
             print("Opción no válida. Por favor, ingrese un número del 1 al 4.")
 if __name__ == "__main__":
