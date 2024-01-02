@@ -74,8 +74,7 @@ def main():
             product_id = input("Ingrese el ID del producto a vender: ")
             quantity = int(input("Ingrese la cantidad a vender: "))
             store_manager.sell_product(product_id, quantity)
-        elif choice == '3':
-            store_manager.generate_sales_report()
+        
         elif choice == '4':
             store_manager.save_inventory()
             store_manager.save_sales()
