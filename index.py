@@ -13,11 +13,7 @@ class StoreManager:
         self.sales_filename = sales_filename
         self.inventory = self.load_inventory()
         self.sales = self.load_sales()
-    def load_inventory(self):
-        if os.path.exists(self.inventory_filename):
-            with open(self.inventory_filename, 'rb') as file:
-                return pickle.load(file)
-        return []
+    
     def load_sales(self):
         if os.path.exists(self.sales_filename):
             with open(self.sales_filename, 'rb') as file:
