@@ -81,7 +81,8 @@ def main():
             store_manager.save_sales()
             print("Saliendo del programa. ¡Hasta luego!")
             break
-       
+        else:
+            print("Opción no válida. Por favor, ingrese un número del 1 al 4.")
 if __name__ == "__main__":
     main()
 
